@@ -479,7 +479,7 @@ tbody tr:last-child .us{border-radius:0 0 12px 12px;border-bottom-color:transpar
 /* footer */
 footer{margin-top:clamp(96px,11vw,150px);padding-block:0 32px}
 footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
-.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:28px;font-size:14px}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px;font-size:14px}
 .foot h4{margin:0 0 10px;font-size:13px;font-weight:600}
 .foot a{display:flex;align-items:center;min-height:36px;padding:0;color:var(--ink-2);text-decoration:none;transition:color .2s ease}
 .foot a:hover{color:var(--ink)}
@@ -897,7 +897,7 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
         <div><h3><svg class="ic" aria-hidden="true"><use href="#i-pen"/></svg>Projekt pod Twoją branżę</h3><p>Projektuję i koduję stronę od zera, pod Twoich klientów i ich najczęstsze pytania.</p></div>
         <div><h3><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Hosting, SSL i kopie zapasowe</h3><p>Strona działa, ma certyfikat i kopie zapasowe. Ty się tym nie zajmujesz.</p></div>
         <div><h3><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg>Zmiany, kiedy potrzebujesz</h3><p>Nowe zdjęcia, ceny albo godziny? Piszesz do mnie, a ja je wprowadzam.</p></div>
-        <div><h3><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Mapy Google i opinie</h3><p>W pakiecie Strona + Mapy dbam o Twój Profil Firmy, zbieram nowe opinie i co miesiąc wysyłam raport: ile telefonów i na którym miejscu jesteś.</p></div>
+        <div><h3><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Mapy Google i opinie</h3><p>W pakiecie <a href="/strona-i-mapy">Strona + Mapy</a> dbam o Twój Profil Firmy i opinie, a co miesiąc wysyłam raport z liczbą telefonów.</p></div>
       </div>
       <div class="card price-card rv" style="--d:200ms">
         <span class="mono">Strona</span>
@@ -906,7 +906,8 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
         <div style="margin-top:18px;padding-top:18px;border-top:1px solid var(--line)">
         <span class="mono">Strona + Mapy · polecany</span>
         <p class="big"><span data-count="249">249</span> zł <small>/ mies.</small></p>
-        <p class="muted" style="color:var(--ink-2);font-size:13.5px">To co wyżej oraz Profil Firmy w Google, nowe opinie, 2 wpisy w Google miesięcznie i raport. 0 zł na start, umowa na 6 miesięcy.</p>
+        <p class="muted" style="color:var(--ink-2);font-size:13.5px">Strona oraz opieka nad Mapami Google i opiniami. 0 zł na start, umowa na 6 miesięcy.</p>
+        <a href="/strona-i-mapy">Co jest w pakiecie <svg class="ic" aria-hidden="true" style="width:15px;height:15px"><use href="#i-arrow"/></svg></a>
         </div>
         <a href="#porownanie">Zobacz porównanie <svg class="ic" aria-hidden="true" style="width:15px;height:15px"><use href="#i-arrow"/></svg></a>
       </div>
@@ -946,6 +947,7 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
           <button class="btn btn-ink" type="submit" id="send"><svg class="ic send-ic" aria-hidden="true"><use href="#i-send"/></svg><svg class="ic ok-ic" aria-hidden="true"><use href="#i-check"/></svg><span id="send-t">Wyślij</span></button>
           <p class="status" id="f-status" role="status"></p>
         </div>
+        <p class="status" style="margin-top:10px;font-size:12.5px;color:var(--ink-3)">Formularz otwiera Twoją pocztę z gotową wiadomością. Administratorem danych jest Marcin Różycki, szczegóły w <a href="/polityka-prywatnosci">polityce prywatności</a>.</p>
         <div class="msg" id="msg" hidden>
           <label class="mono" for="f-msg" style="color:var(--ink-3)">Gotowa wiadomość</label>
           <textarea id="f-msg" readonly></textarea>
@@ -1016,12 +1018,10 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
     <div class="qa rv" style="--d:100ms" id="qa">
       <div class="qa-i open"><h3><button class="qa-b" type="button" aria-expanded="true" aria-controls="qa1" id="qb1">Ile kosztuje podgląd?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa1" role="region" aria-labelledby="qb1"><div><p>Nic. Przygotowuję go, zanim cokolwiek zapłacisz, i nie zobowiązuje Cię do niczego.</p></div></div></div>
       <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa2" id="qb2">Nie mam jeszcze strony. Czy to problem?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa2" role="region" aria-labelledby="qb2"><div><p>Nie. Wpisz w formularzu „nie mam”, a przygotuję podgląd od zera.</p></div></div></div>
-      <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa3" id="qb3">Co dokładnie jest w abonamencie?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa3" role="region" aria-labelledby="qb3"><div><p>Za 129 zł: projekt i kod strony, hosting, certyfikat SSL, kopie zapasowe, audyt SEO i AEO na start oraz zmiany treści i zdjęć, kiedy ich potrzebujesz. Za 249 zł dodatkowo: Profil Firmy w Google, prośby o opinie dla Twoich klientów (kod QR i SMS), 2 wpisy w Google miesięcznie i raport co miesiąc. Bez ukrytych kosztów.</p></div></div></div>
+      <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa3" id="qb3">Co dokładnie jest w abonamencie?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa3" role="region" aria-labelledby="qb3"><div><p>Za 129 zł: projekt i kod strony, hosting, certyfikat SSL, kopie zapasowe, audyt SEO i AEO na start oraz zmiany treści i zdjęć, kiedy ich potrzebujesz. Za 249 zł dodatkowo dbam o Twoje miejsce w Mapach Google i nowe opinie, <a href="/strona-i-mapy">szczegóły pakietu</a>. Bez ukrytych kosztów.</p></div></div></div>
       <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa8" id="qb8">Moja strona działa. Po co mi audyt?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa8" role="region" aria-labelledby="qb8"><div><p>Strona może działać i dalej oddawać klientów konkurencji. Audyt pokazuje, na jakie hasła nie ma Cię w Google, czy ChatGPT i inne asystenty AI polecają kogoś innego i w którym miejscu strony ludzie rezygnują. Dostajesz to w liczbach, a nie w ogólnikach.</p></div></div></div>
       <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa4" id="qb4">Na jak długo jest umowa?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa4" role="region" aria-labelledby="qb4"><div><p>Strona: 12 miesięcy po 129 zł. Strona + Mapy: 6 miesięcy po 249 zł, potem z miesięcznym wypowiedzeniem. W obu start kosztuje 0 zł.</p></div></div></div>
       <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa5" id="qb5">Czy stronę można wykupić?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa5" role="region" aria-labelledby="qb5"><div><p>Tak, wykup jest możliwy. Warunki ustalimy, zanim podpiszesz umowę. Wolisz od razu zapłacić jednorazowo? Napisz, a wycenię.</p></div></div></div>
-      <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa9" id="qb9">Gwarantujesz pierwsze miejsce w Google?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa9" role="region" aria-labelledby="qb9"><div><p>Nie, nikt uczciwy tego nie zagwarantuje. Gwarantuję pracę co miesiąc i raport, w którym widzisz miejsce w Mapach i liczbę telefonów. Pierwsze efekty widać zwykle po 2–3 miesiącach.</p></div></div></div>
-      <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa10" id="qb10">Czego potrzebujesz ode mnie do Map?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa10" role="region" aria-labelledby="qb10"><div><p>Dodajesz mnie jako menedżera w Profilu Firmy w Google. To zajmuje 2 minuty, pokażę Ci jak.</p></div></div></div>
       <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa6" id="qb6">Z kim będę rozmawiać?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa6" role="region" aria-labelledby="qb6"><div><p>Ze mną. Projektuję, koduję i odpowiadam sam, bez infolinii i działu obsługi.</p></div></div></div>
       <div class="qa-i"><h3><button class="qa-b" type="button" aria-expanded="false" aria-controls="qa7" id="qb7">Dla jakich firm robisz strony?<span class="pm" aria-hidden="true"></span></button></h3><div class="qa-p" id="qa7" role="region" aria-labelledby="qb7"><div><p>Najczęściej dla kuchni i mebli na wymiar, fizjoterapii, medycyny estetycznej, remontów łazienek i stomatologii. Robię też strony dla innych lokalnych firm usługowych. Jeśli klienci szukają Cię w internecie, dobra strona się przyda.</p></div></div></div>
     </div>
@@ -1070,6 +1070,7 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
       <div><a class="brand" href="#start"><b>Marcin Różycki</b></a><p>Strony internetowe w abonamencie dla lokalnych firm. 0&nbsp;zł na start, od 129&nbsp;zł miesięcznie.</p></div>
       <div><h4>Strona</h4><a href="#telefon">Jak to wygląda</a><a href="#test">Test strony</a><a href="#co-dostajesz">Co dostajesz</a><a href="#pytania">Pytania</a></div>
       <div><h4>Kontakt</h4><a href="#podglad">Zamów podgląd</a><a href="mailto:marcin@rozycki.pro">marcin@rozycki.pro</a><a href="#o-mnie">O mnie</a></div>
+      <div><h4>Więcej</h4><a href="/strona-i-mapy">Strona + Mapy</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/regulamin">Regulamin</a></div>
     </div>
     <div class="legal"><span>© 2026 rozycki.pro · Marcin Różycki, Łódź</span><span>Zdjęcia poglądowe: Pexels</span></div>
   </div>
