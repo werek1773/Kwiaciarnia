@@ -921,7 +921,7 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
     <div class="rv">
       <span class="mono eyebrow">Podgląd za darmo</span>
       <h2 id="h-live"><span>Nie wierz mi na słowo.</span>Zobacz swoją stronę.</h2>
-      <p class="lead">Podeślij adres obecnej strony. Przygotuję podgląd, jak mogłaby wyglądać, zanim cokolwiek zapłacisz. Bez zobowiązań.</p>
+      <p class="lead">Podeślij adres obecnej strony i napisz, kiedy mogę zadzwonić. Przygotuję podgląd, a potem to ja dzwonię do Ciebie w umówionym terminie, żeby go omówić. Bez zobowiązań.</p>
       <a class="mailbig" id="mail" href="mailto:marcin@rozycki.pro">marcin@rozycki.pro</a>
       <div class="btns"><button class="btn btn-ink" type="button" id="copy-mail"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>Kopiuj adres</span></button><a class="btn btn-line" href="#form">Wypełnij formularz</a></div>
     </div>
@@ -941,6 +941,7 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
             </select></div>
           <div class="field full"><label for="f-site">Obecna strona</label><input id="f-site" name="site" inputmode="url" placeholder="twojafirma.pl albo „nie mam”"></div>
           <div class="field full" id="f-contact-w"><label for="f-contact">E-mail lub telefon</label><input id="f-contact" name="contact" autocomplete="email" placeholder="anna@twojafirma.pl"></div>
+          <div class="field full"><label for="f-when">Kiedy mogę zadzwonić?</label><input id="f-when" name="when" placeholder="np. wtorek po 16:00"></div>
         </div>
         <div class="attach" id="attach" hidden><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span id="attach-t">Dołączę wynik testu</span></div>
         <div class="form-row">
@@ -1367,7 +1368,7 @@ footer .wrap{padding-top:40px;border-top:1px solid var(--line)}
     }
     var sel = $('f-kind'), nm = v('f-name'), kind = sel.options[sel.selectedIndex].text, site = v('f-site') || 'nie mam';
     var subject = 'Podgląd strony: ' + (nm || kind);
-    var body = 'Dzień dobry,\nchcę zobaczyć podgląd nowej strony.\n\nImię i firma: ' + (nm || '-') + '\nRodzaj firmy: ' + kind + '\nObecna strona: ' + site + '\nKontakt: ' + c + '\n' + testSummary();
+    var body = 'Dzień dobry,\nchcę zobaczyć podgląd nowej strony.\n\nImię i firma: ' + (nm || '-') + '\nRodzaj firmy: ' + kind + '\nObecna strona: ' + site + '\nKontakt: ' + c + '\nKiedy mogę zadzwonić: ' + (v('f-when') || 'proszę zaproponować termin') + '\n' + testSummary();
     $('f-msg').value = 'Do: marcin@rozycki.pro\nTemat: ' + subject + '\n\n' + body;
     $('msg').hidden = false;
     var sb = $('send'); sb.classList.add('done'); $('send-t').textContent = 'Gotowe';
